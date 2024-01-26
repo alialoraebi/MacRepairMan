@@ -19,11 +19,12 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/contact', async (req, res) => {
+    console.log(req.body);
     let mailOptions = {
         from: 'your-email@gmail.com', // sender address
         to: 'recipient-email@example.com', // list of receivers
         subject: 'New Contact Form Submission', // Subject line
-        text: 'This is a fallback plain text message for email clients that do not support HTML',
+        // text: 'This is a fallback plain text message for email clients that do not support HTML',
         html: '<p><strong>Name:</strong> ' + req.body.name + '</p>' +
             '<p><strong>Email:</strong> ' + req.body.email + '</p>' +
             '<p><strong>Message:</strong> ' + req.body.message + '</p>'
