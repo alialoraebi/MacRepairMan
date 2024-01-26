@@ -1,3 +1,5 @@
+require('dotenv').config({ path: 'C:\\Users\\Ali\'s PC\\Desktop\\macRepair\\.env' });
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -11,8 +13,8 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.GMAIL_EMAIL, // your email
-        pass: process.env.GMAIL_PASSWORD // your email password
+        user: process.env.GMAIL_EMAIL,
+        pass: process.env.GMAIL_PASSWORD
     }
 });
 
