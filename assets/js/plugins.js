@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Send the form data using AJAX
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "/contact");
+        xhr.open("POST", "http://localhost:3000/contact");
         xhr.onreadystatechange = function () {
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
